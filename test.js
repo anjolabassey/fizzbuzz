@@ -1,44 +1,41 @@
  <script src="src/convert.js"><>/script>
 <script src="spec/convertSpec.js"></script>
 
-describe("Determine the sequence of an array of numbers: ", function() {
+ <script src="src/convert.js"><>/script>
+<script src="spec/convertSpec.js"></script>
 
-describe("Case for an empty array", function() {
+describe("Fizz Buzz tests ", function() {
 
-  it("should return 0 for an empty array", function() {
-     expect(aritGeo([])).toEqual(0);
+  it("should return `Fizz` for number divisible by 3", function() {
+    expect(fizzBuzz(3)).toBe('Fizz');
   });
 
-});
-
-describe("Case for an arithmetic sequence", function() {
-
-  it("should return `Arithmetic` for [2, 4, 6, 8, 10]", function() {
-    expect(aritGeo([2, 4, 6, 8, 10])).toEqual('Arithmetic');
+  it("should return `Buzz` for number divisible by 5", function() {
+    expect(fizzBuzz(5)).toBe('Buzz');
   });
 
-  it("should return `Arithmetic` for [5, 11, 17, 23, 29, 35, 41]", function() {
-    expect(aritGeo([5, 11, 17, 23, 29, 35, 41])).toEqual('Arithmetic');
+  it("should return `FizzBuzz` for 15", function() {
+    expect(fizzBuzz(15)).toBe('FizzBuzz');
   });
 
-  it("should return `Arithmetic` for [15, 10, 5, 0, -5, -10]", function() {
-    expect(aritGeo([15, 10, 5, 0, -5, -10])).toEqual('Arithmetic');
+  it("should return `FizzBuzz` for 45", function() {
+    expect(fizzBuzz(45)).toBe('FizzBuzz');
   });
 
-});
-
-describe("Case for a geometric sequence", function() {
-
-  it("should return `Geometric` for [2, 6, 18, 54, 162]", function() {
-    expect(aritGeo([2, 6, 18, 54, 162])).toEqual('Geometric');
+  it("should return `FizzBuzz` for 90", function() {
+    expect(fizzBuzz(90)).toBe('FizzBuzz');
   });
 
-  it("should return `Geometric` for [0.5, 3.5, 24.5, 171.5]", function() {
-    expect(aritGeo([0.5, 3.5, 24.5, 171.5])).toEqual('Geometric');
+  it("should return `Fizz` for 63", function() {
+    expect(fizzBuzz(63)).toBe('Fizz');
   });
 
-  it("should return `Geometric` for [−128, 64, −32, 16, −8]", function() {
-    expect(aritGeo([-128, 64, -32, 16, -8])).toEqual('Geometric');
+  it("should return 7 since its indivisible by 3 and 5", function() {
+    expect(fizzBuzz(7)).toBe(7);
+  });
+
+  it("should return 101 since its indivisible by 3 and 5", function() {
+    expect(fizzBuzz(101)).toBe(101);
   });
 
 });
